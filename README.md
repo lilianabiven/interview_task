@@ -3,6 +3,7 @@ I wrote a python script which checks for expensive EC2 and RDS instances, and se
 
 # Requirements
 Cost explorer needs to be activated first via the management console, before using the API. To do this, just go the Cost Explorer page for the first time, as instructed here: https://docs.aws.amazon.com/cost-management/latest/userguide/ce-enable.html
+
 After activation, you have to wait 24 hours before getting any data.
 
 You should have an AWS config in `~/.aws/config`, with the following content:
@@ -20,7 +21,7 @@ This was only tested with python 3.10, but I suppose it works with any version >
 You need to install the AWS `boto3` module. 
 
 The Simple Notification Service is set up using email notifications.
-Deploy using `cloud_formation.template`. Remember to fill in the parameter `email_address` beforehand. This is the email
+Deploy using the AWS Cloud Formation template `cloud_formation.json`. Remember to fill in the parameter `email_address` beforehand. This is the email
 address the inspection report will be sent to.
 
 # Usage
