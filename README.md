@@ -42,6 +42,13 @@ To check for instances which cost over 100 USD per day:
 
 `python3 cost_checker.py costChecker1 100 arn:aws:sns:eu-central-1:752594615588:CostReports csv_report.csv`
 
+## Example email content
+```
+In the last 24 hours:
+A t2.micro instance cost 189.9 USD
+A db.t2_micro instance cost 111.3 USD
+```
+
 ## Example csv report
 
 | instance_type | amount | currency | start_date | end_date   |
@@ -49,13 +56,6 @@ To check for instances which cost over 100 USD per day:
 | db.t2_micro   | 120.7  | USD      | 2022-11-17 | 2022-11-18 |
 | t2.micro      | 189.9  | USD      | 2022-11-18 | 2022-11-19 |
 | db.t2_micro   | 111.3  | USD      | 2022-11-18 | 2022-11-19 |
-
-## Example email content
-```
-In the last 24 hours:
-A t2.micro instance cost 189.9 USD
-A db.t2_micro instance cost 111.3 USD
-```
 
 # Improvements: 
 - The report only includes the instance types. To get the instance ids, I think you'd need to enable 
