@@ -41,7 +41,7 @@ To make this tool run once per weekday at 8:00, add the following cron to your m
 # Examples
 To check for instances which cost over 100 USD per day:
 
-`python3 cost_checker.py costChecker1 100 "arn:aws:sns:eu-central-1:752594615588:CostReports csv_report.csv`
+`python3 cost_checker.py costChecker1 100 arn:aws:sns:eu-central-1:752594615588:CostReports csv_report.csv`
 
 ## Example csv report
 
