@@ -1,6 +1,5 @@
 # Summary
-I wrote a python script which checks for expensive EC2 and RDS instances, and sends a report via the Simple Notification Service.
-
+I wrote a python script which checks for expensive EC2 and RDS instances, and sends an email report via the Simple Notification Service.
 # Requirements
 Cost explorer needs to be activated first via the management console, before using the API. To do this, just go the Cost Explorer page for the first time, as instructed here: https://docs.aws.amazon.com/cost-management/latest/userguide/ce-enable.html
 
@@ -20,8 +19,7 @@ This was only tested with python 3.10, but I suppose it works with any version >
 
 You need to install the AWS `boto3` module. 
 
-The Simple Notification Service is set up using email notifications.
-Deploy using the AWS Cloud Formation template `cloud_formation.json`. Remember to fill in the parameter `email_address` beforehand. This is the email
+Deploy using the AWS Cloud Formation template `cloud_formation.json`. Remember to fill in the parameter `email_address` beforehand, this is the email
 address the inspection report will be sent to.
 
 # Usage
@@ -33,7 +31,7 @@ address the inspection report will be sent to.
 in the past 24 hours, it will be included in the inspection report.   
 - `sns_topic_arn` is the ARN of the SNS topic used to send the inspection report.
 - `csv_report_filename` is the name of a file that will be filled every time a report is sent, to keep a history 
-of the inspection reports. 
+of the inspection reports.
 
 To make this tool run once per weekday at 8:00, add the following cron to your machine:
 
