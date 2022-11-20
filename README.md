@@ -59,6 +59,6 @@ A db.t2_micro instance cost 111.3 USD
 
 # Improvements: 
 - The report only includes the instance types. To get the instance ids, I think you'd need to enable 
-**Hourly and Resource Level Data** in the Cost explorer settings, and the use the method 
+**Hourly and Resource Level Data** in the Cost explorer settings, and then use the method 
 `get_cost_and_usage_with_resources` instead of `get_cost_and_usage_with_resources`.
 - Error handling is minimal and could definitely be improved
